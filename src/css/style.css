@@ -1,0 +1,44 @@
+@lost flexbox flex;
+
+@import '../../node_modules/normalize.css/normalize.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  lost-utility: clearfix;
+  background: grey;
+  lost-center: 960px;
+}
+
+.item {
+  background: lime;
+  lost-column: 1/4;
+  margin-bottom: 20px;
+}
+
+@media all and (max-width: 800px) {
+  .container {
+    padding: 0 20px;
+  }
+  .item {
+    lost-column: 1/2;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .item {
+    lost-column: 1/1;
+  }
+}
