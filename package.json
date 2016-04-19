@@ -5,7 +5,7 @@
   "scripts": {
     "prebuild": "mkdir -p public && mkdir -p public/css",
     "build": "npm run build:css && npm run copy:html && echo \"Build OK\"",
-    "build:css": "postcss -u autoprefixer -u lost -u postcss-import -u cssnano -c options.json -o public/css/style.css src/css/style.css",
+    "build:css": "postcss -u precss -u lost -u autoprefixer -u cssnano -c options.json -o public/css/style.css src/css/style.css",
     "copy:html": "cp src/index.html public/",
     "watch": "rerun-script",
     "serve": "browser-sync start --server \"public\" --files \"public/**/*\"",
@@ -24,7 +24,7 @@
     "lost": "^6.7.2",
     "normalize.css": "^4.1.1",
     "postcss-cli": "^2.5.1",
-    "postcss-import": "^8.1.0",
+    "precss": "^1.4.0",
     "rerun-script": "^0.6.0"
   }
 }

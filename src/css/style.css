@@ -16,6 +16,13 @@ body {
   padding: 0;
 }
 
+$red-color: #ff0000;
+
+.flexbox {
+  display: flex;
+  color: $red-color;
+}
+
 .container {
   lost-utility: clearfix;
   background: grey;
